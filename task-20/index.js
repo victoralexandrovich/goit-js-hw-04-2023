@@ -1,15 +1,11 @@
-function checkStorage(available, ordered) {
-  let message;
+function calculateTotalPrice(order) {
+  let total = 0;
   // Change code below this line
 
-  if (ordered === 0) {
-    message = "There are no products in the order!";
-  } else if (ordered > available) {
-    message = "Your order is too large, there are not enough items in stock!";
-  } else {
-    message = "The order is accepted, our manager will contact you";
+  for (let i = 0; i < order.length; i += 1) {
+    total += order[i];
   }
 
   // Change code above this line
-  return message;
+  return total;
 }

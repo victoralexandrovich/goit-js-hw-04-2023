@@ -1,4 +1,7 @@
-function calculateTotalPrice(orderedQuantity, pricePerItem) {
-  const totalPrice = orderedQuantity * pricePerItem;
-  return totalPrice;
+function calculateEngravingPrice(message, pricePerWord) {
+  // Change code below this line
+
+  return message.split(" ").length * pricePerWord;
+
+  // Change code above this line
 }

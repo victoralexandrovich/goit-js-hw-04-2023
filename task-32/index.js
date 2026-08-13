@@ -1,5 +1,13 @@
-function getSubstring(string, length) {
-  const substring = string.slice(0, length); // Change this line
+function includes(array, value) {
+  // Change code below this line
 
-  return substring;
+  for (const element of array) {
+    if (element === value) {
+      return true;
+    }
+  }
+
+  return false;
+
+  // Change code above this line
 }

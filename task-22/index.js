@@ -1,5 +1,11 @@
-function checkIfCanAccessContent(subType) {
-  const canAccessContent = subType === "pro" || subType === "vip"; // Change this line
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  // Change code below this line
 
-  return canAccessContent;
+  for (let i = min; i <= max; i += 1) {
+    numbers.push(i);
+  }
+
+  // Change code above this line
+  return numbers;
 }

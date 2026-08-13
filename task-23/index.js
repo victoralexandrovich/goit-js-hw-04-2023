@@ -1,6 +1,15 @@
-function isNumberNotInRange(start, end, number) {
-  const isInRange = number >= start && number <= end;
-  const isNotInRange = !isInRange; // Change this line
+function filterArray(numbers, value) {
+  // Change code below this line
 
-  return isNotInRange;
+  const newArray = [];
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > value) {
+      newArray.push(numbers[i]);
+    }
+  }
+
+  return newArray;
+
+  // Change code above this line
 }

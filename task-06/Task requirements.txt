@@ -1,18 +1,12 @@
-Магазин з продажу ремонтних дроїдів готовий до відкриття, залишилося написати скрипт для їх замовлення. Оголоси змінні та присвой їм відповідні значення:
+На відміну від рядків, елементи масиву можна змінювати, звернувшись до них за індексом і присвоївши інше значення.
 
-pricePerDroid - ціна одного дроїда, значення 800
-orderedQuantity - кількість дроїдів у замовленні, значення 6
-deliveryFee - вартість доставки, значення 50
-totalPrice - загальна сума замовлення до сплати, не забудь про вартість доставки
-message - повідомлення про стан замовлення у форматі "You ordered droids worth <total price> credits. Delivery (<delivery fee> credits) is included in total price."
-Оголошена змінна orderedQuantity
-Значення змінної orderedQuantity - це число 6
-Оголошена змінна pricePerDroid
-Значення змінної pricePerDroid - це число 800
-Оголошена змінна deliveryFee
-Значення змінної deliveryFee - це число 50
-Оголошена змінна totalPrice
-Значення змінної totalPrice - це число 4850
-Оголошена змінна message
-Значення змінної message - це рядок "You ordered droids worth 4850 credits. Delivery (50 credits) is included in total price."
+const numbers = [1, 2, 3, 4, 5];
+numbers[0] = 7;
+numbers[2] = 14;
+console.log(numbers); // [7, 2, 14, 4, 5];
 
+
+Виконай перевизначення значення елементів з індексами 1 і 3. Заміни "plum" на "peach", а "orange" на "banana".
+
+Оголошена змінна fruits
+Значення змінної fruits - це масив ["apple", "peach", "pear", "banana"]

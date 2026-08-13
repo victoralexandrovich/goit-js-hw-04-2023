@@ -1,13 +1,8 @@
-function checkStorage(available, ordered) {
-  let message;
+function makeArray(firstArray, secondArray, maxLength) {
   // Change code below this line
 
-  if (ordered > available) {
-    message = "Not enough goods in stock!";
-  } else {
-    message = "Order is processed, our manager will contact you.";
-  }
+  const combinedArray = firstArray.concat(secondArray);
+  return combinedArray.slice(0, maxLength);
 
   // Change code above this line
-  return message;
 }

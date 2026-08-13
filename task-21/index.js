@@ -1,5 +1,16 @@
-function isNumberInRange(start, end, number) {
-  const isInRange = number >= start && number <= end; // Change this line
+function findLongestWord(string) {
+  // Change code below this line
 
-  return isInRange;
+  const words = string.split(" ");
+  let longestWord = words[0];
+
+  for (let i = 1; i < words.length; i += 1) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+
+  return longestWord;
+
+  // Change code above this line
 }

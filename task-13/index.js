@@ -1,4 +1,7 @@
-function isAdult(age) {
-  var passed = age >= 18;
-  return passed;
+function slugify(title) {
+  // Change code below this line
+
+  return title.toLowerCase().split(" ").join("-");
+
+  // Change code above this line
 }

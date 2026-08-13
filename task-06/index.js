@@ -1,7 +1,5 @@
-const pricePerDroid = 800;
-const orderedQuantity = 6;
-const deliveryFee = 50;
+const fruits = ["apple", "plum", "pear", "orange"];
+// Write your code under this line
 
-const totalPrice = pricePerDroid * orderedQuantity + deliveryFee;
-
-const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
+fruits[1] = "peach";
+fruits[3] = "banana";

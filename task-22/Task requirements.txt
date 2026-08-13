@@ -1,37 +1,17 @@
-Оператор || приводить всі операнди до буля і повертає значення одного з них. Лівий операнд, якщо його можна привести до true, і правий - в інших випадках.
+Метод push() дозволяє додати один або кілька елементів в кінець масиву, без необхідності вказувати індекси елементів, що додаються.
 
-вираз || вираз
-У наступному прикладі умова зліва поверне true, тому результатом всього виразу буде true - повернеться значення першого операнда, яке було приведене до true.
+const planets = ["Earth", "Mars", "Venus"];
+planets.push("Jupiter");
+planets.push("Saturn", "Uranus", "Neptune");
 
-const age = 5;
-console.log(age < 10 || age > 30); // true || false -> true
-Тут результатом теж буде true, оскільки хоча б один з операндів, у цьому випадку правий, був приведений до true.
-
-const age = 40;
-console.log(age < 10 || age > 30); // false || true -> true
-А тут жодна з умов не виконується, тому отримуємо false - значення останнього операнда.
-
-const age = 20;
-console.log(age < 10 || age > 30); // false || false -> false
-Тобто логічне «АБО» запинається на істині і повертає те, на чому запнулося або останній операнд.
-
-console.log(true || false); // true
-console.log(false || true); // true
-console.log(true || true); // true
-
-console.log(3 || false); // 3
-console.log(false || 3); // 3
-console.log(3 || true); // 3
-console.log(true || 3); // true
+console.log(planets); // ['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
 
 
-Функція checkIfCanAccessContent(subType) перевіряє, чи може користувач отримати доступ до контенту. Перевірка відбувається за типом передплати. Отримати доступ можуть тільки користувачі з передплатою pro або vip.
+Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max.
 
-Присвой змінній canAccessContent вираз перевірки передплати. Якщо значення параметра subType дорівнює рядкам "pro" або "vip", користувач отримає доступ. Результатом виразу перевірки буде буль true або false.
-
-Оголошена функція checkIfCanAccessContent(subType)
-У виразі перевірки використаний оператор ||
-Виклик checkIfCanAccessContent("pro") повертає true
-Виклик checkIfCanAccessContent("starter") повертає false
-Виклик checkIfCanAccessContent("vip") повертає true
-Виклик checkIfCanAccessContent("free") повертає false
+Оголошена функція createArrayOfNumbers(min, max)
+Виклик функції createArrayOfNumbers(1, 3) повертає [1, 2, 3]
+Виклик функції createArrayOfNumbers(14, 17) повертає [14, 15, 16, 17]
+Виклик функції createArrayOfNumbers(29, 34) повертає [29, 30, 31, 32, 33, 34]
+Виклик функції createArrayOfNumbers() з випадковими min і max повертає правильний масив
+В циклі for використовувався метод push

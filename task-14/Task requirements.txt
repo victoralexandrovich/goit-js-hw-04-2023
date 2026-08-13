@@ -1,26 +1,29 @@
-«Нестрогі» оператори == і != виконують перетворення типів значень, що порівнюються, що може призвести до помилок, особливо у початківців.
+Метод slice(begin, end) повертає новий масив, що містить копію частини вихідного масиву, не змінюючи його. Копія робиться від begin і до, але не включно, end - індекси елементів вихідного масиву.
 
-// ❌ Погано, виконується приведення типів
-console.log(5 == "5"); // true
-console.log(5 != "5"); // false
-console.log(1 == true); // true
-console.log(1 != true); // false
-Тому для перевірки рівності або нерівності двох значень використовуються оператори === (строга рівність) і !== (строга нерівність), які не виконують приведення типів операндів.
+Якщо begin та end не вказані, буде створена повна копія вихідного масиву.
+Якщо не вказаний end, копіювання буде від start до кінця вихідного масиву.
+Якщо значення start від'ємне, а end не вказане, то будуть скопійовані останні N елементів.
+const planets = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
 
-// ✅ Добре, приведення типів не виконується
-console.log(5 === "5"); // false
-console.log(5 === 5); // true
-console.log(5 !== "5"); // true
-console.log(5 !== 5); // false
-console.log(1 === true); // false
-console.log(1 !== true); // true
+console.log(planets.slice(0, 2)); // ['Earth', 'Mars']
+console.log(planets.slice(0, 4)); // ['Earth', 'Mars', 'Venus', 'Jupiter']
+console.log(planets.slice(1, 3)); // ['Mars', 'Venus']
+console.log(planets.slice(-2)); // ['Jupiter', 'Saturn']
+console.log(planets.slice()); // ['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn']
 
-Функція isValidPassword (password) перевіряє рівність збереженого і введеного паролів і повертає результат перевірки - буль true або false. Змінна SAVED_PASSWORD зберігає значення попередньо збереженого пароля. Введений пароль передається у параметр password.
 
-Присвой змінній isMatch вираз перевірки рівності введених і попередньо збережених паролів. Результатом виразу перевірки повинно бути true, якщо значення збігаються, і false - якщо ні.
 
-Оголошена функція isValidPassword(password)
-У виразі перевірки паролів використаний оператор ===
-Виклик isValidPassword("mangodab3st") повертає false
-Виклик isValidPassword("kiwirul3z") повертає false
-Виклик isValidPassword("jqueryismyjam") повертає true
+Доповни код таким чином, щоб змінні містили часткові копії вихідного масиву fruits.
+
+firstTwoEls - масив із перших двох елементів
+nonExtremeEls - масив з усіх елементів, крім першого та останнього
+lastThreeEls - масив із трьох останніх елементів
+Оголошена змінна fruits
+Значення змінної fruits - це масив ["apple", "plum", "pear", "orange", "banana"]
+Оголошена змінна firstTwoEls
+Значення змінної firstTwoEls - це масив ["apple", "plum"]
+Оголошена змінна nonExtremeEls
+Значення змінної nonExtremeEls - це масив ["plum", "pear", "orange"]
+Оголошена змінна lastThreeEls
+Значення змінної lastThreeEls - це масив ["pear", "orange", "banana"]
+Змінній lastThreeEls присвоєна копія частини масиву fruits після застосування методу slice з правильними аргументами

@@ -1,44 +1,20 @@
-Розгалуження використовуються для виконання різного коду, залежно від умови. Принцип роботи простий - результат виразу в умові блоку if приводиться до буля true або false.
+Метод concat використовується для об'єднання двох або більше масивів. Він не змінює масив на якому викликається, а повертає новий. Порядок аргументів методу впливає на порядок елементів нового масиву.
 
-if (умова) {
-  // тіло if
-} else {
-  // тіло else
-}
-Якщо умова приводиться до true, то виконується код у фігурних дужках тіла if, а блок else ігнорується.
+const firstArray = ["Mercury", "Venus", "Earth"];
+const secondArray = ["Mars", "Jupiter"];
+const thirdArray = ["Saturn", "Uranus", "Neptune"];
+const allPlanets = firstArray.concat(secondArray, thirdArray);
 
-let cost;
-const subscription = "pro";
-
-if (subscription === "pro") {
-  cost = 100;
-} else {
-  cost = 0;
-}
-
-console.log(cost); // 100
-Якщо умова приводиться до false, код блоку if буде пропущений, і виконається код у фігурних дужках після блоку else.
-
-let cost;
-const subscription = "free";
-
-if (subscription === "pro") {
-  cost = 100;
-} else {
-  cost = 0;
-}
-
-console.log(cost); // 0
+console.log(firstArray); // ['Mercury', 'Venus', 'Earth'];
+console.log(allPlanets); // ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
 
+Доповни код таким чином, щоб у змінній allClients утворився масив усіх елементів масивів oldClients і newClients.
 
-Додай вираз перевірки повноліття користувача, значення параметра age, в умову для інструкції if.
-
-Якщо користувач повнолітній, повинен виконуватися блок if і у змінну message записується рядок "You are an adult".
-В іншому випадку повинен виконуватися блок else і записується рядок "You are a minor".
-Оголошена функція checkAge(age).
-У виразі перевірки віку використаний оператор >=
-Виклик checkAge(20) повертає "You are an adult"
-Виклик checkAge(8) повертає "You are a minor"
-Виклик checkAge(14) повертає "You are a minor"
-Виклик checkAge(38) повертає "You are an adult"
+Оголошена змінна oldClients
+Значення змінної oldClients - це масив ["Mango", "Ajax", "Poly", "Kiwi"]
+Оголошена змінна newClients
+Значення змінної newClients - це масив ["Peach", "Houston"]
+Оголошена змінна allClients
+Значення змінної allClients - це масив ["Mango", "Ajax", "Poly", "Kiwi", "Peach", "Houston"]
+Змінній allClients присвоєний масив після застосування методу concat з правильними аргументами

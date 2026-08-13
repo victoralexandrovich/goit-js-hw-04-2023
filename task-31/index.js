@@ -1,8 +1,11 @@
-const courseTopic = "JavaScript essentials";
-// Change code below this line
+function findNumber(start, end, divisor) {
+  // Change code below this line
 
-const courseTopicLength = courseTopic.length;
-const firstElement = courseTopic[0];
-const lastElement = courseTopic[courseTopic.length - 1];
+  for (let i = start; i < end; i += 1) {
+    if (i % divisor === 0) {
+      return i;
+    }
+  }
 
-// Change code above this line
+  // Change code above this line
+}

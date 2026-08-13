@@ -1,9 +1,7 @@
-function add(a, b, c) {
-  return a + b + c;
+function getExtremeElements(array) {
+  // Change code below this line
+
+  return [array[0], array[array.length - 1]];
+
+  // Change code above this line
 }
-
-add(2, 5, 8); // 15
-
-console.log(add(15, 27, 10));
-console.log(add(10, 20, 30));
-console.log(add(5, 10, 15));

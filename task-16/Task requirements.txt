@@ -1,14 +1,12 @@
-Функція checkStorage(available, ordered) перевіряє можливість оформлення замовлення і повертає повідомлення про результат. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику:
+Напиши функцію під назвою makeArray, яка приймає три параметри: firstArray (масив), secondArray (масив) та maxLength (число). Функція повинна створювати новий масив, який містить всі елементи з firstArray, а потім всі елементи з secondArray.
 
-available - загальна кількість товарів на складі
-ordered - одиниць товару в замовленні
-Використовуючи розгалуження, доповни код функції таким чином, що:
-
-Якщо в замовленні вказане число, яке перевищує кількість товарів на складі, у змінну message записується рядок "Not enough goods in stock!".
-В іншому випадку записується рядок "Order is processed, our manager will contact you.".
-Оголошена функція checkStorage(available, ordered).
-Виклик checkStorage(100, 50) повертає "Order is processed, our manager will contact you."
-Виклик checkStorage(100, 130) повертає "Not enough goods in stock!"
-Виклик checkStorage(200, 20) повертає "Order is processed, our manager will contact you."
-Виклик checkStorage(200, 150) повертає "Order is processed, our manager will contact you."
-Виклик checkStorage(150, 180) повертає "Not enough goods in stock!"
+Якщо кількість елементів у новому масиві перевищує maxLength, функція повинна повернути копію масиву з довжиною maxLength елементів.
+В іншому випадку, функція повинна повернути весь новий масив.
+Оголошена функція makeArray(firstArray, secondArray, maxLength)
+Виклик makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3) повертає ["Mango", "Poly", "Ajax"]
+Виклик makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4) повертає ["Mango", "Poly", "Houston", "Ajax"]
+Виклик makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3) повертає ["Mango", "Ajax", "Chelsea"]
+Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2) повертає ["Earth", "Jupiter"]
+Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4) повертає ["Earth", "Jupiter", "Neptune", "Uranus"]
+Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0) повертає []
+Виклик функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив

@@ -1,12 +1,6 @@
-// Оголошена функція isValidPassword(password)
-// У виразі перевірки паролів використаний оператор ===
-// Змінна SAVED_PASSWORD містить попередньо збережений пароль
+const fruits = ["apple", "plum", "pear", "orange", "banana"];
 
-function isValidPassword(password) {
-  const SAVED_PASSWORD = "jqueryismyjam";
-  let isMatch = password === SAVED_PASSWORD;
-  return isMatch;
-}
-
-// Виклик isValidPassword("mangodab3st") повертає false
-// Виклик isValidPassword("kiwirul3z") повертає false
+// Change code below this line
+const firstTwoEls = fruits.slice(0, 2);
+const nonExtremeEls = fruits.slice(1, 4);
+const lastThreeEls = fruits.slice(-3);

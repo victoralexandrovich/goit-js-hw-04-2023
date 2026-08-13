@@ -1,20 +1,9 @@
-Функція getShippingCost(country) повинна перевіряти можливість доставки товару в країну користувача (параметр country) і повертати повідомлення про результат, що зберігається у змінній message. Обов'язково використовуй інструкцію switch.
+Напиши функцію getEvenNumbers(start, end), яка повертає масив усіх парних чисел від start до end. Парним вважається число, яке ділиться на 2 без остачі (10 % 2 === 0). Використовуй цикл "for".
 
-Формат рядка, що повертається "Shipping to <country> will cost <price> credits", де замість <country> і <price>, необхідно підставити відповідні значення.
-
-Список країн і вартість доставки:
-
-China - 100 кредитів
-Chile - 250 кредитів
-Australia - 170 кредитів
-Jamaica - 120 кредитів
-Зі списку видно, що доставка можлива не скрізь. Якщо зазначена країна відсутня у списку, то функція повинна повернути рядок "Sorry, there is no delivery to your country"
-
-Оголошена функція getShippingCost(country)
-В тілі функції використана інструкція switch
-Виклик getShippingCost("Australia") повертає "Shipping to Australia will cost 170 credits"
-Виклик getShippingCost("Germany") повертає "Sorry, there is no delivery to your country"
-Виклик getShippingCost("China") повертає "Shipping to China will cost 100 credits"
-Виклик getShippingCost("Chile") повертає "Shipping to Chile will cost 250 credits"
-Виклик getShippingCost("Jamaica") повертає "Shipping to Jamaica will cost 120 credits"
-Виклик getShippingCost("Sweden") повертає "Sorry, there is no delivery to your country"
+Оголошена функція getEvenNumbers(start, end)
+Виклик функції getEvenNumbers(2, 5) повертає [2, 4]
+Виклик функції getEvenNumbers(3, 11) повертає [4, 6, 8, 10]
+Виклик функції getEvenNumbers(6, 12) повертає [6, 8, 10, 12]
+Виклик функції getEvenNumbers(8, 8) повертає [8]
+Виклик функції getEvenNumbers(7, 7) повертає []
+Виклик функції getEvenNumbers() з випадковими start і end повертає правильний масив

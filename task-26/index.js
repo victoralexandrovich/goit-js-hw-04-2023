@@ -1,13 +1,11 @@
-function checkPassword(password) {
-  const ADMIN_PASSWORD = "jqueryismyjam";
-  let message;
+function calculateTotalPrice(order) {
+  let total = 0;
   // Change code below this line
 
-  message =
-    password === ADMIN_PASSWORD
-      ? "Access is allowed"
-      : "Access denied, wrong password!";
+  for (const item of order) {
+    total += item;
+  }
 
   // Change code above this line
-  return message;
+  return total;
 }

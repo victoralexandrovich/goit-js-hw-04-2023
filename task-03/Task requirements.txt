@@ -1,34 +1,13 @@
-В JavaScript змінна не асоціюється з будь-яким типом даних, тип є у її значення. Тобто змінна може зберігати значення різних типів.
+Функція checkStorage перевіряє можливість оформлення замовлення і повертає повідомлення про результат. Вона приймає два параметри, значення яких будуть задаватися під час її виклику.
 
-Number - цілі числа і числа з плаваючою комою (крапкою).
-String - рядки, послідовність від нуля або більше символів. Рядок починається і закінчується одинарною ' або подвійними лапками ".
-Boolean - логічний тип даних, прапорці стану. Всього два значення: true і false. Наприклад, на питання, чи увімкнено світло в кімнаті, можна відповісти так (true) або ні (false).
-// Числа
-const age = 20;
-const salary = 3710.84;
+available - доступна кількість товарів на складі
+ordered - кількість одиниць товару в замовленні
+Виконай рефакторинг коду функції checkStorage, використовуючи патерн «раннє повернення».
 
-// Рядки
-const name = "Mango";
-const description = "JavaSript essentials";
-
-// Булі
-const isModalOpen = true;
-const isLoggedIn = false;
-
-Оголоси наступні змінні, використовуючи ключове слово const або let, і присвой їм відповідні значення.
-
-topSpeed - число 160.
-distance - число 617.54.
-login - рядок "mango935".
-isOnline - буль true.
-isAdmin - буль false.
-Оголошена змінна topSpeed
-Значення змінної topSpeed - це число 160
-Оголошена змінна distance
-Значення змінної distance - це число 617.54
-Оголошена змінна login
-Значення змінної login - це рядок "mango935"
-Оголошена змінна isOnline
-Значення змінної isOnline - це буль true
-Оголошена змінна isAdmin
-Значення змінної isAdmin - це буль false
+Оголошена функція checkStorage(available, ordered)
+Виклик checkStorage(100, 50) повертає "The order is accepted, our manager will contact you"
+Виклик checkStorage(100, 130) повертає "Your order is too large, not enough goods in stock!"
+Виклик checkStorage(70, 0) повертає "Your order is empty!"
+Виклик checkStorage(200, 20) повертає "The order is accepted, our manager will contact you"
+Виклик checkStorage(200, 250) повертає "Your order is too large, not enough goods in stock!"
+Виклик checkStorage(150, 0) повертає "Your order is empty!"

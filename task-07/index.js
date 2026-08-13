@@ -1,5 +1,4 @@
-function sayHi() {
-  console.log("Hello, this is my first function!");
-}
+const fruits = ["apple", "peach", "pear", "banana"];
 
-sayHi();
+// Change code below this line
+const fruitsArrayLength = fruits.length;

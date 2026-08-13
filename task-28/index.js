@@ -1,21 +1,6 @@
-function checkPassword(password) {
-  const ADMIN_PASSWORD = "jqueryismyjam";
-  let message;
-  // Change code below this line
-
-  switch (password) {
-    case null:
-      message = "Canceled by user!";
-      break;
-
-    case ADMIN_PASSWORD:
-      message = "Welcome!";
-      break;
-
-    default:
-      message = "Access denied, wrong password!";
-  }
-
-  // Change code above this line
-  return message;
-}
+// Change code below this line
+const a = 3 % 3;
+const b = 4 % 3;
+const c = 11 % 8;
+const d = 12 % 7;
+const e = 8 % 3;

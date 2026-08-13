@@ -1,16 +1,7 @@
-Функція checkStorage(available, ordered) перевіряє можливість оформлення замовлення і повертає повідомлення про результат. Вона оголошує два параметри, значення яких будуть задаватися під час її виклику.
+Напиши функцію calculateTotalPrice(order), яка приймає один параметр order - масив чисел, і обчислює загальну суму його елементів. Загальна сума елементів повинна зберігатися у змінній total, яка повертається як результат роботи функції.
 
-available - доступна кількість товарів на складі
-ordered - одиниць товару в замовленні
-Використовуючи розгалуження, доповни код функції таким чином, що:
-
-Якщо в замовленні ще немає товарів, тобто значення параметра ordered дорівнює 0, у змінну message присвоюється рядок "There are no products in the order!".
-Якщо товарів у замовленні більше, ніж доступно товарів на складі, то у змінну message присвоюється рядок "Your order is too large, there are not enough items in stock!".
-В іншому випадку у змінну message присвоюється рядок "The order is accepted, our manager will contact you".
-Оголошена функція checkStorage(available, ordered)
-Виклик checkStorage(100, 50) повертає "The order is accepted, our manager will contact you"
-Виклик checkStorage(100, 130) повертає "Your order is too large, there are not enough items in stock!"
-Виклик checkStorage(70, 0)повертає "There are no products in the order!"
-Виклик checkStorage(200, 20) повертає "The order is accepted, our manager will contact you"
-Виклик checkStorage(200, 250) повертає "Your order is too large, there are not enough items in stock!"
-Виклик checkStorage(150, 0) повертає "There are no products in the order!"
+Оголошена функція calculateTotalPrice(order)
+Виклик функції calculateTotalPrice([12, 85, 37, 4]) повертає 138
+Виклик функції calculateTotalPrice([164, 48, 291]) повертає 503
+Виклик функції calculateTotalPrice([412, 371, 94, 63, 176]) повертає 1116
+Виклик функції calculateTotalPrice() з випадковим масивом повертає правильне значення

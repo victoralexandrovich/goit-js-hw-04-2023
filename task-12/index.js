@@ -1,4 +1,9 @@
-function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
-  let totalPrice = orderedQuantity * pricePerDroid + deliveryFee;
-  return `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
+function makeStringFromArray(array, delimiter) {
+  let string;
+  // Change code below this line
+
+  string = array.join(delimiter);
+
+  // Change code above this line
+  return string;
 }
