@@ -1,11 +1,23 @@
-function calculateTotalPrice(order) {
-  let total = 0;
-  // Change code below this line
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction", "mysticism"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism", "adventure"],
+  },
+];
+// Change code below this line
 
-  for (let i = 0; i < order.length; i += 1) {
-    total += order[i];
-  }
-
-  // Change code above this line
-  return total;
-}
+const allGenres = books.flatMap((book) => book.genres);
+const uniqueGenres = allGenres.filter(
+  (genre, index, array) => array.indexOf(genre) === index,
+);

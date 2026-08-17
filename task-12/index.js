@@ -1,9 +1,13 @@
-function makeStringFromArray(array, delimiter) {
-  let string;
-  // Change code below this line
+// Change code below this line
+const getCommonElements = (firstArray, secondArray) => {
+  const commonElements = [];
 
-  string = array.join(delimiter);
+  firstArray.forEach((element) => {
+    if (secondArray.includes(element)) {
+      commonElements.push(element);
+    }
+  });
 
-  // Change code above this line
-  return string;
-}
+  return commonElements;
+};
+// Change code above this line

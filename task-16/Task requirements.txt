@@ -1,12 +1,27 @@
-Напиши функцію під назвою makeArray, яка приймає три параметри: firstArray (масив), secondArray (масив) та maxLength (число). Функція повинна створювати новий масив, який містить всі елементи з firstArray, а потім всі елементи з secondArray.
+Метод flatMap(callback) - аналогічний методу map(), але застосовується у випадках, коли результат - це багатовимірний масив, який необхідно «розгладити».
 
-Якщо кількість елементів у новому масиві перевищує maxLength, функція повинна повернути копію масиву з довжиною maxLength елементів.
-В іншому випадку, функція повинна повернути весь новий масив.
-Оголошена функція makeArray(firstArray, secondArray, maxLength)
-Виклик makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3) повертає ["Mango", "Poly", "Ajax"]
-Виклик makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4) повертає ["Mango", "Poly", "Houston", "Ajax"]
-Виклик makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3) повертає ["Mango", "Ajax", "Chelsea"]
-Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2) повертає ["Earth", "Jupiter"]
-Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4) повертає ["Earth", "Jupiter", "Neptune", "Uranus"]
-Виклик makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0) повертає []
-Виклик функції makeArray() з випадковими масивами і випадковим числом повертає правильний масив
+масив.flatMap((element, index, array) => {
+  // Тіло колбек-функції
+});
+У масиві students зберігається список студентів зі списком предметів, які відвідує студент, у властивості courses. Кілька студентів можуть відвідувати один і той самий предмет. Необхідно скласти список всіх предметів, які відвідує ця група студентів, поки що, навіть повторюваних.
+
+const students = [
+  { name: "Mango", courses: ["mathematics", "physics"] },
+  { name: "Poly", courses: ["science", "mathematics"] },
+  { name: "Kiwi", courses: ["physics", "biology"] },
+];
+
+students.map(student => student.courses);
+// [["mathematics", "physics"], ["science", "mathematics"], ["physics", "biology"]]
+
+students.flatMap(student => student.courses);
+// ["mathematics", "physics", "science", "mathematics", "physics", "biology"];
+Він викликає колбек-функцію для кожного елемента вихідного масиву, а результат її роботи записує у новий масив. Відмінність від map() у тому, що новий масив «розгладжується» на глибину, що дорівнює одиниці (одна вкладеність). Цей розгладжений масив і є результатом роботи flatMap().
+
+Використовуючи метод flatMap(), зроби так, щоб у змінній genres вийшов масив усіх жанрів книг (властивість genres) з масиву книг books.
+
+Оголошена змінна books
+Значення змінної books - це масив об'єктів
+Оголошена змінна genres
+Значення змінної genres - це масив [ "adventure", "history", "fiction", "horror", "mysticism" ]
+Для перебирання масиву books використовується метод flatMap()

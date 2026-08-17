@@ -1,15 +1,50 @@
-Напиши функцію includes(array, value), яка робить те саме, що і метод масиву масив.includes(значення) - перевіряє, чи присутнє в масиві array значення value, повертаючи true, якщо присутнє, і false в іншому випадку.
+Метод some(callback) перевіряє, чи проходить хоча б один елемент масиву тест колбек-функції. Повертає true або false.
 
-При виконанні цього завдання в тілі функції includes() не можна використовувати метод масив.includes(значення).
+масив.some((element, index, array) => {
+  // Callback function body
+});
+Не змінює оригінальний масив.
+Поелементо перебирає оригінальний масив.
+Повертає true, якщо хоча б один елемент масиву задовольняє умову.
+Повертає false, якщо жоден елемент масиву не задовольняє умову.
+Перебирання масиву припиняється, якщо колбек повертає true.
+// Чи є хоча б один елемент, що більший або дорівнює нулю? - так
+[1, 2, 3, 4, 5].some(value => value >= 0); // true
 
-Тобі потрібно реалізувати свою власну логіку для виконання цього завдання. Розглянь вибір методу ітерації, який пройде по всьому масиву (array), і на кожній ітерації перевірятиме, чи дорівнює елемент масиву value. Якщо так, поверниtrue, в іншому випадку поверни false.
+// Чи є хоча б один елемент, що більший або дорівнює нулю? - так
+[-7, -20, 3, -10, -14].some(value => value >= 0); // true
 
-Оголошена функція includes(array, value)
-Виклик includes([1, 2, 3, 4, 5], 3) повертає true
-Виклик includes([1, 2, 3, 4, 5], 17) повертає false
-Виклик includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") повертає true
-Виклик includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") повертає false
-Виклик includes(["apple", "plum", "pear", "orange"], "plum") повертає true
-Виклик includes(["apple", "plum", "pear", "orange"], "kiwi") повертає false
-Виклик includes() для випадкового масиву з випадковим value повертає правильний boolean
-У функції includes використовується for, return, але не метод масиву includes
+// Чи є хоча б один елемент, що менший нуля? - ні
+[1, 2, 3, 4, 5].some(value => value < 0); // false
+
+// Чи є хоча б один елемент, що менший нуля? - так
+[1, 2, 3, -10, 4, 5].some(value => value < 0); // true
+
+
+Використовуючи метод some(), доповни код таким чином, щоб:
+
+У змінній anyElementInFirstIsEven був результат перевірки наявності парних елементів в масиві firstArray.
+У змінній anyElementInFirstIsOdd був результат перевірки наявності непарних елементів в масиві firstArray.
+У змінній anyElementInSecondIsEven був результат перевірки наявності парних елементів в масиві secondArray.
+У змінній anyElementInSecondIsOdd був результат перевірки наявності непарних елементів в масиві secondArray.
+У змінній anyElementInThirdIsEven був результат перевірки наявності парних елементів в масиві thirdArray.
+У змінній anyElementInThirdIsOdd був результат перевірки наявності непарних елементів в масиві thirdArray.
+Оголошена змінна firstArray
+Значення змінної firstArray - це масив [26, 94, 36, 18]
+Оголошена змінна secondArray
+Значення змінної secondArray - це масив [17, 61, 23]
+Оголошена змінна thirdArray
+Значення змінної thirdArray - це масив [17, 26, 94, 61, 36, 23, 18]
+Оголошена змінна anyElementInFirstIsEven
+Значення змінної anyElementInFirstIsEven - це буль true
+Оголошена змінна anyElementInFirstIsOdd
+Значення змінної anyElementInFirstIsOdd - це буль false
+Оголошена змінна anyElementInSecondIsEven
+Значення змінної anyElementInSecondIsEven - це буль false
+Оголошена змінна anyElementInSecondIsOdd
+Значення змінної anyElementInSecondIsOdd - це буль true
+Оголошена змінна anyElementInThirdIsEven
+Значення змінної anyElementInThirdIsEven - це буль true
+Оголошена змінна anyElementInThirdIsOdd
+Значення змінної anyElementInThirdIsOdd - це буль true
+Для перебирання масивів використаний метод some()

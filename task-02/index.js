@@ -1,12 +1,13 @@
-function checkPassword(password) {
-  const ADMIN_PASSWORD = "jqueryismyjam";
-  // Change code below this line
+function deliverPizza(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
+}
 
-  if (password === ADMIN_PASSWORD) {
-    return "Welcome!";
-  }
+function makePizza(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
+}
 
-  return "Access denied, wrong password!";
+// Change code below this line
 
-  // Change code above this line
+function makeMessage(pizzaName, callback) {
+  return callback(pizzaName);
 }

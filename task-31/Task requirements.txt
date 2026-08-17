@@ -1,34 +1,76 @@
-Якщо цикл знаходиться в тілі функції, то оператор break не припиняє виконання функції, а тільки перерве цикл. Для того щоб переривати виконання відразу циклу і функції, є оператор return.
+Цей масив об'єктів ми будемо передавати в параметр users під час виклику функції із завдання.
 
-У прикладі шукаємо число 3. Щойно виконається умова if, робимо повернення, яке перерве виконання циклу і функції.
-
-function fn() {
-  for (let i = 0; i <= 5; i += 1) {
-    console.log(i);
-
-    if (i === 3) {
-      console.log("Знайшли число 3, робимо повернення, перериваючи цикл і функцію");
-      return i;
-    }
+[
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male"
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female"
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male"
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female"
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male"
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male"
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female"
   }
+]
 
-  // Цей console.log не виконається
-  console.log("Лог після циклу в тілі функції");
-}
 
-const result = fn();
-console.log("Лог після виходу з функції");
-console.log(`Результат виконання функції ${result}`);
+Доповни функцію isEveryUserActive(users) таким чином, щоб вона перевіряла, чи всі користувачі зараз активні (властивість isActive) і повертала true або false.
 
-Виконай рефакторинг функції findNumber(start, end, divisor) таким чином, щоб вона:
-
-повертала перше число від start до end, яке ділиться на divisor без остачі
-не використала оператор break
-не використала змінну number
-Оголошена функція findNumber(start, end, divisor)
-Виклик findNumber(2, 6, 5) повертає 5
-Виклик findNumber(8, 17, 3) повертає 9
-Виклик findNumber(6, 9, 4) повертає 8
-Виклик findNumber(16, 35, 7) повертає 21
-Виклик findNumber() з випадковим набором чисел повертає правильний результат
-В циклі for не повинен використовуватися break для виходу до завершення всіх ітерацій циклу
+Оголошена змінна isEveryUserActive
+Змінній isEveryUserActive присвоєна стрілочна функція з параметром (users)
+Для перебирання параметра users використовується метод every()
+Виклик функції із зазначеним масивом користувачів повертає false
+Виклик функції з випадковими, але валідними аргументами, повертає правильне значення

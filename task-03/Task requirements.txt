@@ -1,13 +1,22 @@
-Функція checkStorage перевіряє можливість оформлення замовлення і повертає повідомлення про результат. Вона приймає два параметри, значення яких будуть задаватися під час її виклику.
+Якщо колбек-функція - маленька, і потрібна тільки для передачі аргументом, її можна оголосити безпосередньо на момент виклику функції, в яку передаємо колбек. Така функція буде доступна тільки у якості значення параметра і більше ніде в коді.
 
-available - доступна кількість товарів на складі
-ordered - кількість одиниць товару в замовленні
-Виконай рефакторинг коду функції checkStorage, використовуючи патерн «раннє повернення».
+function registerGuest(name, callback) {
+  console.log(`Реєструємо гостя ${name}.`);
+  callback(name);
+}
 
-Оголошена функція checkStorage(available, ordered)
-Виклик checkStorage(100, 50) повертає "The order is accepted, our manager will contact you"
-Виклик checkStorage(100, 130) повертає "Your order is too large, not enough goods in stock!"
-Виклик checkStorage(70, 0) повертає "Your order is empty!"
-Виклик checkStorage(200, 20) повертає "The order is accepted, our manager will contact you"
-Виклик checkStorage(200, 250) повертає "Your order is too large, not enough goods in stock!"
-Виклик checkStorage(150, 0) повертає "Your order is empty!"
+// Передаємо інлайн-функцію greet у якості колбека
+registerGuest("Mango", function greet(name) {
+  console.log(`Ласкаво просимо ${name}.`);
+});
+
+// Передаємо інлайн-функцію notify у якості колбека
+registerGuest("Poly", function notify(name) {
+  console.log(`Шановний(а) ${name}, ваш номер буде готовий за 30 хвилин.`);
+});
+
+Доповни другий виклик функції makePizza(pizzaName, callback), передавши другим аргументом інлайн колбек-функцію eatPizza(pizzaName), яка логує рядок "Eating pizza <назва піци>".
+
+Оголошена функція makePizza
+Функція makePizza приймає два параметри
+Другим аргументом під час виклику makePizza("Ultracheese") передана функція eatPizza з єдиним параметром pizzaName

@@ -1,24 +1,89 @@
-Метод includes(value) перевіряє, чи присутній в масиві елемент зі значенням value, і повертає true або false відповідно. Сфера застосування цього методу зводиться до ситуацій, коли необхідно перевірити, чи присутній елемент в масиві, і не важлива його позиція (індекс).
+Цей масив об'єктів ми будемо передавати в параметр users під час виклику функції із завдання.
 
-const planets = ["Earth", "Mars", "Venus"];
+[
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+    age: 37
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+    age: 34
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+    age: 24
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+    age: 21
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+    age: 27
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+    age: 38
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+    age: 39
+  }
+]
 
-console.log(planets.includes("Earth")); // true
-console.log(planets.includes("Mars")); // true
-console.log(planets.includes("Venus")); // true
-console.log(planets.includes("Jupiter")); // false
 
+Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала масив користувачів, у яких є друг з вказаним іменем friendName. Друзі кожного користувача зберігаються у властивості friends.
 
-Функція checkFruit(fruit) приймає рядок з назвою фрукта (параметр fruit), і перевіряє, чи присутній такий фрукт в масиві fruits.
+Поради:
 
-Доповни код функції таким чином, що якщо:
-
-фрукт присутній в масиві, то функція повертає true;
-фрукт відсутній в масиві, то функція повертає false.
-Оголошена функція checkFruit(fruit)
-Виклик checkFruit("plum") повертає true
-Виклик checkFruit("mandarin") повертає false
-Виклик checkFruit("pear") повертає true
-Виклик checkFruit("Pear") повертає false
-Виклик checkFruit("apple") повертає true
-Виклик функції checkFruit() з випадковим словом повертає правильне значення boolean
-У функції використовувався метод includes
+Метод filter() можна використовувати для створення нового масиву з елементами, які задовольняють певну умову.
+Використовуй метод includes() для перевірки, чи масив friends містить friendName.
+Оголошена змінна getUsersWithFriend
+Змінній getUsersWithFriend присвоєна стрілочна функція з параметрами (users, friendName)
+Для перебирання параметра users використовується метод filter()
+Якщо значення параметра friendName - це рядок "Briana Decker", функція повертає масив об'єктів користувачів з іменами Sharlene Bush і Sheree Anthony
+Якщо значення параметра friendName - це рядок "Goldie Gentry", функція повертає масив об'єктів користувачів з іменами Elma Head і Sheree Anthony
+Якщо значення параметра friendName - це рядок "Adrian Cross", функція повертає порожній масив
+Виклик функції з випадковими, але валідними аргументами, повертає правильне значення

@@ -1,15 +1,34 @@
-Метод split(delimiter) дозволяє перетворити рядок на масив, "розбивши" його по роздільнику delimiter. Якщо роздільник - це порожній рядок, отримаємо масив окремих символів. Роздільником може бути один або кілька символів.
+Анонімні стрілочні функції відмінно підходять як колбеки для перебираючих методів масиву завдяки коротшому синтаксису оголошення, особливо, якщо не потрібне тіло функції.
 
-const name = "Mango";
-console.log(name.split("")); // ["M", "a", "n", "g", "o"]
+const numbers = [5, 10, 15, 20, 25];
 
-const message = "JavaScript essentials";
-console.log(message.split(" ")); // ["JavaScript", "essentials"]
+// Оголошення функції
+numbers.forEach(function (number, index) {
+  console.log(`Індекс ${index}, значення ${number}`);
+});
+
+// Анонімна стрілочна функція
+numbers.forEach((number, index) => {
+  console.log(`Індекс ${index}, значення ${number}`);
+});
+Стрілочну колбек-функцію також можна оголошувати окремо і передавати на неї посилання. Це варто робити, якщо одна функція використовується у декількох місцях програми або якщо вона громіздка.
+
+const numbers = [5, 10, 15, 20, 25];
+
+const logMessage = (number, index) => {
+  console.log(`Індекс ${index}, значення ${number}`);
+};
+
+numbers.forEach(logMessage);
 
 
-Доповни код функції splitMessage(message, delimiter). Вона повинна розбити рядок message за вказаним роздільником delimiter і зберегти отриманий масив рядків у змінній words.
+Виконай рефакторинг функції calculateTotalPrice(orderedItems), замінивши її оголошення на стрілочну функцію. Заміни колбек-функцію, передану в метод forEach(), на стрілочну функцію.
 
-Оголошена функція splitMessage(message, delimiter)
-Виклик splitMessage("Mango hurries to the train", " ") повертає ["Mango", "hurries", "to", "the", "train"]
-Виклик splitMessage("Mango", "") повертає ["M", "a", "n", "g", "o"]
-Виклик splitMessage("best_for_week", "_") повертає ["best", "for", "week"]
+Оголошена змінна calculateTotalPrice
+Змінній calculateTotalPrice присвоєна стрілочна функція з параметром (orderedItems)
+Для перебирання масиву orderedItems використаний метод forEach
+Колбек для методу forEach - це стрілочна функція
+Виклик функції calculateTotalPrice([12, 85, 37, 4]) повертає 138
+Виклик функції calculateTotalPrice([164, 48, 291]) повертає 503
+Виклик функції calculateTotalPrice([412, 371, 94, 63, 176]) повертає 1116
+Виклик функції з випадковими, але валідними аргументами, повертає правильне значення

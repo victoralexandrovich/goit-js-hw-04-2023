@@ -1,11 +1,5 @@
-function calculateTotalPrice(order) {
-  let total = 0;
-  // Change code below this line
-
-  for (const item of order) {
-    total += item;
-  }
-
-  // Change code above this line
-  return total;
-}
+// Change code below this line
+const getActiveUsers = (users) => {
+  return users.filter((user) => user.isActive);
+};
+// Change code above this line

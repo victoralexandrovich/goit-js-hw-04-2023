@@ -1,5 +1,5 @@
-function checkFruit(fruit) {
-  const fruits = ["apple", "plum", "pear", "orange"];
-
-  return fruits.includes(fruit); // Change this line
-}
+// Change code below this line
+const getUsersWithFriend = (users, friendName) => {
+  return users.filter((user) => user.friends.includes(friendName));
+};
+// Change code above this line

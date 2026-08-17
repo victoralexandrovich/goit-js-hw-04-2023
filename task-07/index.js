@@ -1,4 +1,13 @@
-const fruits = ["apple", "peach", "pear", "banana"];
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+  // Change code below this line
 
-// Change code below this line
-const fruitsArrayLength = fruits.length;
+  firstArray.forEach(function (element) {
+    if (secondArray.includes(element)) {
+      commonElements.push(element);
+    }
+  });
+
+  return commonElements;
+  // Change code above this line
+}

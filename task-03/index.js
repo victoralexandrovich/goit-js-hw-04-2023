@@ -1,13 +1,14 @@
-function checkStorage(available, ordered) {
-  // Change code below this line
-  if (ordered === 0) {
-    return "Your order is empty!";
-  }
-
-  if (ordered > available) {
-    return "Your order is too large, not enough goods in stock!";
-  }
-
-  return "The order is accepted, our manager will contact you";
-  // Change code above this line
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
 }
+
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
+
+// Change code below this line
+
+makePizza("Ultracheese", function eatPizza(pizzaName) {
+  console.log(`Eating pizza ${pizzaName}`);
+});

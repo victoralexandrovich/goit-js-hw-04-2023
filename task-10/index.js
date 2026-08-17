@@ -1,9 +1,11 @@
-function splitMessage(message, delimiter) {
-  let words;
-  // Change code below this line
+// Change code below this line
+const calculateTotalPrice = (orderedItems) => {
+  let totalPrice = 0;
 
-  words = message.split(delimiter);
+  orderedItems.forEach((item) => {
+    totalPrice += item;
+  });
 
-  // Change code above this line
-  return words;
-}
+  return totalPrice;
+};
+// Change code above this line

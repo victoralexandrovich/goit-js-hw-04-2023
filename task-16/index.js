@@ -1,8 +1,20 @@
-function makeArray(firstArray, secondArray, maxLength) {
-  // Change code below this line
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism"],
+  },
+];
+// Change code below this line
 
-  const combinedArray = firstArray.concat(secondArray);
-  return combinedArray.slice(0, maxLength);
-
-  // Change code above this line
-}
+const genres = books.flatMap((book) => book.genres);

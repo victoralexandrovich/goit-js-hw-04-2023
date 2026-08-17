@@ -1,7 +1,3 @@
-function getExtremeElements(array) {
-  // Change code below this line
-
-  return [array[0], array[array.length - 1]];
-
-  // Change code above this line
-}
+// Change code below this line
+const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+// Change code above this line

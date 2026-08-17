@@ -1,7 +1,13 @@
-function calculateEngravingPrice(message, pricePerWord) {
-  // Change code below this line
+// Change code below this line
+const filterArray = (numbers, value) => {
+  const filteredNumbers = [];
 
-  return message.split(" ").length * pricePerWord;
+  numbers.forEach((number) => {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
 
-  // Change code above this line
-}
+  return filteredNumbers;
+};
+// Change code above this line

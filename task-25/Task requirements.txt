@@ -1,19 +1,82 @@
-Спільними елементами масивів називають ті елементи, які присутні у всіх масивах.
+Цей масив об'єктів ми будемо передавати в параметр users під час виклику функції із завдання.
 
-Наприклад, у двох масивах [1, 3, 5] і [0, 8, 5, 3] спільними будуть числа 3 і 5, оскільки вони присутні в обох вихідних масивах. А числа 0, 1 і 8 присутні тільки в одному з масивів.
+[
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+    age: 37
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+    age: 34
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+    age: 24
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+    age: 21
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+    age: 27
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+    age: 38
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+    age: 39
+  }
+]
 
-Доповни код функції getCommonElements(array1, array2), яка приймає два масиви (array1 та array2) довільної довжини в якості параметрів. Усередині функції:
 
-Створи порожній масив з назвою newArray.
-Використай цикл for для ітерації кожного елемента у array1.
-У середині циклу перевір, чи поточний елемент існує у array2 за допомогою методу includes.
-Якщо він існує, додай елемент до newArray за допомогою методу push.
-Поверни newArray як результат.
-Оголошена функція getCommonElements(array1, array2)
-Виклик getCommonElements([1, 2, 3], [2, 4]) повертає [2]
-Виклик getCommonElements([1, 2, 3], [2, 1, 17, 19]) повертає [1, 2]
-Виклик getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]) повертає [12, 27, 3]
-Виклик getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) повертає [10, 30, 40]
-Виклик getCommonElements([1, 2, 3], [10, 20, 30]) повертає []
-Виклик функції getCommonElements() з випадковими двома масивами повертає правильний масив
-В циклі for використовувалися методи includes і push
+Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів всіх користувачів (властивість friends). У декількох користувачів можуть бути однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
+
+Оголошена змінна getFriends
+Змінній getFriends присвоєна стрілочна функція з параметром (users)
+Виклик функції із зазначеним масивом користувачів повертає масив ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
+Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
